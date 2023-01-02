@@ -1,5 +1,5 @@
-# this is lewibs.com
-This is a personal website which I use to show of stuff that ive done in a funway that hopefully gives everyone who looks at it a marginally better day : )
+# Alien Invasion Experience
+This is just me having fun making an engine for threejs. It can be used for best practices when it comes to large threejs projects. Moreover its fun to watch!
 
 # scripts
 ### npm install

@@ -76,7 +76,7 @@ export class Manager {
             this.alien.position.set(meta.ships.fighter.start.x, meta.ships.fighter.start.y, meta.ships.fighter.start.z)
             this.viewer.scene.add(this.alien);
             this.alien.goto(meta.ships.fighter.end);
-            //this.alien.fire(this.earth);
+            this.alien.fire(this.earth);
         }
 
         {
@@ -95,23 +95,5 @@ export class Manager {
                 end: end,
             }));
         }
-
-        // setTimeout(()=>{
-        //     setInterval(()=>{
-        //         console.log("remove missile");
-        //         this.viewer.scene.add(new Missile({
-        //             start: new Vector3(EU, 100, 0),
-        //             end: this.alien.position,
-        //         }))
-        //     }, 1000 * 5)
-        // }, 1000 * 3)
-
-        // setInterval(()=>{
-        //     console.log("remove lazer");
-        //     this.viewer.scene.add(new Lazer({
-        //         start: this.alien.position.clone(),
-        //         end: this.earth.position,
-        //     }));
-        // }, 1000 *5)
     }
 }
