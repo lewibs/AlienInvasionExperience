@@ -4,6 +4,7 @@ import { Missile } from "./objects/Missile";
 export const EU = 10000;
 
 export const meta = {
+    src: "https://github.com/lewibs/AlienInvasionExperience",
     camera:{
         fov: 25,
         aspect: window.innerWidth / window.innerHeight,
