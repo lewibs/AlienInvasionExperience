@@ -54,13 +54,12 @@ export class Missile extends Object3D {
             //make bigger
             this.missile.scale.set(meta.missile.scale, meta.missile.scale, meta.missile.scale)
             //align it
-            this.lookAt(end);
+            this.missile.rotation.x = 0.958132;
             this.add(this.missile);
         }
     }
 
     launch() {
-        this.lookAt(this.end);
         this.exhaust = new Exhaust({
             radius:meta.missile.radius,
             target: this.parent,

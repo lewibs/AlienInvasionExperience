@@ -6,6 +6,7 @@ export class Weapon extends Object3D {
     projectile;
     burst;
     target;
+    shots;
 
     animation;
 
@@ -24,22 +25,25 @@ export class Weapon extends Object3D {
         }
 
         this.projectile = projectile;
-        this.animation = new Tween({x:0})
-        .to({x:1}, rateOfFire)
-        .onRepeat(()=>{
-            let vector = this.target.position.clone();
-            vector = this.worldToLocal(vector);
-            this.add(new this.projectile({
-                start: this.position.clone(),
-                end: new Vector3(vector.x,vector.y,vector.z),
-            }));
-        })
-        .repeat(Infinity);
+        this.animation = (shots)=>{
+            new Tween({x:0})
+            .to({x:1}, rateOfFire)
+            .onRepeat(()=>{
+                let vector = this.target.position.clone();
+                vector = this.worldToLocal(vector);
+                this.add(new this.projectile({
+                    start: this.position.clone(),
+                    end: new Vector3(vector.x,vector.y,vector.z),
+                }));
+            })
+            .repeat(shots || Infinity)
+            .start();
+        }
     }
 
-    fire(obj) {
+    fire(obj, shots) {
         this.target = obj;
-        this.animation.start();
+        this.animation(shots);
     }
 
     stop() {

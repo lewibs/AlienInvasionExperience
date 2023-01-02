@@ -33,8 +33,8 @@ export class Fighter extends Ship {
         //this.add(this.weapons.right);
     }
 
-    fire(obj) {
+    fire(obj, shots) {
         //this.weapons.right.fire(obj)
-        this.weapons.left.fire(obj);
+        this.weapons.left.fire(obj, shots);
     }
 } 

@@ -88,7 +88,7 @@ export const meta = {
     missile: {
         scale: 10,
         radius: 10,
-        velocity: 0.3,
+        velocity: 1,
         texture: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/missile/AIM120-t.png",
         geometry: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/missile/Files/AIM120D.obj",
     },

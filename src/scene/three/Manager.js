@@ -5,15 +5,8 @@ import { Viewer } from "./Viewer";
 import { meta } from "../meta";
 import { loader, LoadTypes } from "./Loader";
 import { Missile } from "../objects/Missile";
-import { Color, Mesh, MeshBasicMaterial, SphereGeometry, Vector3 } from "three";
-import { EU } from "../meta";
-import { Lazer } from "../objects/Lazer";
-import { Moon } from "../objects/Moon";
+import { Vector3 } from "three";
 import { Fighter } from "../objects/ships/Fighter";
-import { findAllInRenderedTree } from "react-dom/test-utils";
-import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { Weapon } from "../objects/ships/Weapon";
 
 export class Manager {
     viewer;
@@ -22,6 +15,7 @@ export class Manager {
     earth;
     moon;
     sun;
+    rocket;
     
     constructor({
         canvas
@@ -71,15 +65,7 @@ export class Manager {
             this.viewer.scene.add(this.sun);
         }
 
-        { //alien
-            this.alien = new Fighter();
-            this.alien.position.set(meta.ships.fighter.start.x, meta.ships.fighter.start.y, meta.ships.fighter.start.z)
-            this.viewer.scene.add(this.alien);
-            this.alien.goto(meta.ships.fighter.end);
-            this.alien.fire(this.earth);
-        }
-
-        {
+        { //escape ship
             const start = new Vector3(
                 meta.ships.rocket.start.x,
                 meta.ships.rocket.start.y,
@@ -90,10 +76,21 @@ export class Manager {
                 meta.ships.rocket.end.y,
                 meta.ships.rocket.end.z,
             );
-            this.viewer.scene.add(new Missile({
+
+            this.rocket = new Missile({
                 start: start,
                 end: end,
-            }));
+            });
+
+            this.viewer.scene.add(this.rocket);
+        }
+
+        { //alien
+            this.alien = new Fighter();
+            this.alien.position.set(meta.ships.fighter.start.x, meta.ships.fighter.start.y, meta.ships.fighter.start.z)
+            this.viewer.scene.add(this.alien);
+            this.alien.goto(meta.ships.fighter.end);
+            this.alien.fire(this.rocket, 7);
         }
     }
 }
