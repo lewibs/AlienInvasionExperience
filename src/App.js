@@ -15,21 +15,44 @@ const Link = styled.a`
   color: #4AF626;
 `;
 
+const Loading = styled.div`
+  position:absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  color: #4AF626;
+`;
+
 function App() {
-  const [, setManager] = useState(); 
+  const [, setManager] = useState();
+  const [loadInfo, setLoadInfo] = useState();
   const ref = useRef();
 
   useEffect(()=>{
-    if (ref.current) {
-      setManager(new Manager({
+    if (ref.current) {        
+      const manager = new Manager({
         canvas: ref.current,
-      }));
+      });
+
+      manager.loader.onProgress = (url, itemsLoaded, itemsTotal)=>{
+        url = url.split("/");
+        url = url[url.length-1];
+        setLoadInfo(`Loading item ${url}...`);
+
+        if (itemsLoaded === itemsTotal) {
+          setLoadInfo(undefined);
+        }
+      }
+
+      setManager(manager);
     }
   }, [ref]);
 
   return(
     <Main>
       <Background>
+        <Loading>{loadInfo}</Loading>
         <Canvas
           forwardRef={ref}
           height={`${window.innerHeight}px`}

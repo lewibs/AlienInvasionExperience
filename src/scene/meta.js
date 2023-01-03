@@ -40,11 +40,11 @@ export const meta = {
         textures: {
             specular: 0x333333,
             shininess: 15,
-            map: 'https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/planets/earth/Earth_Diffuse.jpg',
-            specularMap: 'https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/planets/earth/earth_specular_2048.jpg',
-            normalMap: 'https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/planets/earth/earth_normal_2048.jpg',
+            map: 'https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/planets/earth/Earth_Diffuse.jpg',
+            specularMap: 'https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/planets/earth/earth_specular_2048.jpg',
+            normalMap: 'https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/planets/earth/earth_normal_2048.jpg',
             normalScale: [0.85, -0.85],
-            clouds: 'https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/planets/earth/earth_clouds_2048.png',
+            clouds: 'https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/planets/earth/earth_clouds_2048.png',
         },
         launchZones: [
             {x: 2394.5361395680757, y: 5224.882055007095, z: 7971.476126865361},
@@ -90,8 +90,8 @@ export const meta = {
         scale: 10,
         radius: 10,
         velocity: 1,
-        texture: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/missile/AIM120-t.png",
-        geometry: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/missile/Files/AIM120D.obj",
+        texture: "https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/missile/AIM120-t.png",
+        geometry: "https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/missile/Files/AIM120D.obj",
     },
     lazer: {
         radius: 1,
@@ -128,14 +128,14 @@ export const meta = {
         },
         fighter: {
             velocity: 1,
-            geometry: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/ships/Free_SciFi-Fighter/SciFi_Fighter_AK5.obj",
+            geometry: "https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/ships/Free_SciFi-Fighter/SciFi_Fighter_AK5.obj",
             textures: {
                 specular: 0x333333,
                 shininess: 15,
                 normalScale: [0.85, -0.85],
-                light: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/ships/Free_SciFi-Fighter/SciFi_Fighter_AK5-Lights.jpg",
-                map: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/ships/Free_SciFi-Fighter/SciFi_Fighter_AK5-Normal_Map.jpg",
-                diffuse: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/ships/Free_SciFi-Fighter/SciFi_Fighter_AK5-diffuse.jpg"
+                light: "https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/ships/Free_SciFi-Fighter/SciFi_Fighter_AK5-Lights.jpg",
+                map: "https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/ships/Free_SciFi-Fighter/SciFi_Fighter_AK5-Normal_Map.jpg",
+                diffuse: "https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/ships/Free_SciFi-Fighter/SciFi_Fighter_AK5-diffuse.jpg"
             },
             end: {x: 4168.694003462668, y: 6362.605121389698, z: 9365.604362898332},
             start: {x: 10268.43198983676, y: 8460.51733913214, z: 10518.332013914058}
@@ -144,8 +144,8 @@ export const meta = {
             start: {x:0,y:0,z:0},
             end:  {x: 12091.068833189702, y: 32269.835239847762, z: 51884.2410070035},
             velocity: 10,
-            geometry: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/ships/rocket/uploads_files_872478_shuttle_rockets_and_fuel_tank_exp_obj.obj",
-            texture: "https://raw.githubusercontent.com/lewibs/lewibs.com/develop/data/3d/ships/rocket/uploads_files_872478_shuttle_rockets_and_fuel_tank_exp_obj.mtl",
+            geometry: "https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/ships/rocket/uploads_files_872478_shuttle_rockets_and_fuel_tank_exp_obj.obj",
+            texture: "https://raw.githubusercontent.com/lewibs/AlienInvasionExperience/main/data/3d/ships/rocket/uploads_files_872478_shuttle_rockets_and_fuel_tank_exp_obj.mtl",
         },
     }
 }
